@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "myai"
+version = "0.1.0"
+description = ""
+authors = ["Christian Glissov <cdglissov@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "~3.10"
+black = "^23.9.1"
+ruff = "^0.0.292"
+pandas = "^2.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+skip-string-normalization = true
+line-length = 88
+
+[tool.ruff]
+line-length = 88
+exclude = ["jupyter_notebook_config.py"]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C4",  # flake8-comprehensions
+    "B",  # flake8-bugbear
+    "ISC", # implicit string concatenation
+    "UP",  # alert you when better syntax is available in your python version
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "C901",  # too complex
+]
+# Ruff autofix issues with the following unsafe rules
+unfixable = ["B", "SIM", "TRY", "RUF"]
+fixable = ["ALL"]
+fix = true
+
+[tool.ruff.isort]
+order-by-type = true
+relative-imports-order = "closest-to-furthest"
+extra-standard-library = ["typing"]
+section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
+known-first-party = []
+
+[tool.ruff.pydocstyle]
+convention = "google"

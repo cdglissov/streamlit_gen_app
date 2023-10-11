@@ -1,0 +1,5 @@
+model:
+  type: gpt-3.5-turbo
+  temperature: 0
+  max_tokens: 20
+  max_retries: 4

@@ -8,7 +8,7 @@
         "source.convertImportFormat",
         "source.unusedImports"
     ],
-    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.inlayHints.variableTypes": false,
     "python.analysis.inlayHints.pytestParameters": true,
     "python.analysis.inlayHints.functionReturnTypes": true,
     // black formatting, defaults to all

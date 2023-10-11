@@ -14,6 +14,13 @@ streamlit = "^1.27.2"
 #torch = {url = "https://download.pytorch.org/whl/cu121/torch-2.1.0%2Bcu121-cp310-cp310-win_amd64.whl"}
 #torchaudio = {url = "https://download.pytorch.org/whl/cu121/torchaudio-2.1.0%2Bcu121-cp310-cp310-win_amd64.whl"}
 #torchvision = {url = "https://download.pytorch.org/whl/cu121/torchvision-0.16.0%2Bcu121-cp310-cp310-win_amd64.whl"}
+ipykernel = "^6.25.2"
+openai = "^0.28.1"
+python-dotenv = "^1.0.0"
+langchain = {extras = ["llms"], version = "^0.0.312"}
+omegaconf = "^2.3.0"
+pydantic = "^2.4.2"
+llama-index = "^0.8.43"
 
 [build-system]
 requires = ["poetry-core"]
